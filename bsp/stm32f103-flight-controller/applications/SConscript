@@ -2,7 +2,9 @@ from building import *
 import os
 
 cwd = GetCurrentDir()
-src = Glob('*.c')
+# src = Glob('*.c')
+src = Glob('main.c')
+src += Glob('fc_led.c')
 CPPPATH = [cwd]
 
 group = DefineGroup('Applications', src, depend = [''], CPPPATH = CPPPATH)
